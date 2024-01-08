@@ -1,0 +1,172 @@
+{
+  "api": {
+    "itorchard": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "itorchard35c24082"
+        }
+      ],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+              "userPoolConfig": {
+                "userPoolId": "authitorchard35c24082"
+              }
+            }
+          ],
+          "defaultAuthentication": {
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 7
+            },
+            "authenticationType": "API_KEY"
+          }
+        }
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync"
+    }
+  },
+  "auth": {
+    "itorchard35c24082": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
+  "function": {
+    "bulkQuotationEmailSender": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "GraphQLAPIIdOutput"
+          ],
+          "category": "api",
+          "resourceName": "itorchard"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "contactEmailSender": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "GraphQLAPIIdOutput"
+          ],
+          "category": "api",
+          "resourceName": "itorchard"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "itorchardPostConfirmation": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_bulkQuotationEmailSender_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "bulkQuotationEmailSender"
+        }
+      ]
+    },
+    "AMPLIFY_function_bulkQuotationEmailSender_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "bulkQuotationEmailSender"
+        }
+      ]
+    },
+    "AMPLIFY_function_contactEmailSender_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "contactEmailSender"
+        }
+      ]
+    },
+    "AMPLIFY_function_contactEmailSender_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "contactEmailSender"
+        }
+      ]
+    },
+    "AMPLIFY_function_itorchardPostConfirmation_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "itorchardPostConfirmation"
+        }
+      ]
+    },
+    "AMPLIFY_function_itorchardPostConfirmation_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "itorchardPostConfirmation"
+        }
+      ]
+    },
+    "AMPLIFY_function_itorchardPostConfirmation_userpoolid": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "itorchardPostConfirmation"
+        }
+      ]
+    },
+    "AMPLIFY_function_itorchardPostConfirmation_usertable": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "itorchardPostConfirmation"
+        }
+      ]
+    }
+  },
+  "storage": {
+    "itorchard": {
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "S3"
+    }
+  }
+}

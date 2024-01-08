@@ -1,0 +1,1110 @@
+.section-cmpny-list-header {
+  margin: 0px 20px 0px 20px;
+
+  .number-of-companies-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 15px;
+
+    .showing-result-heading {
+      display: flex;
+      align-items: center;
+      column-gap: 30px;
+      row-gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .text-green-16 {
+      color: $--Primary-Color;
+      font-family: Poppins;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+
+    .total-companies {
+      display: flex;
+      align-items: center;
+      column-gap: 11px;
+
+      .company-icon {
+        width: 20px;
+        height: 21px;
+      }
+    }
+
+    .drop-sort-by {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+
+      .sort-by h6 {
+        color: $--Dark-Grey;
+        font-family: Poppins;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      .dropdown-toggle {
+        border-radius: 5px;
+        border: 1px solid $--grey;
+        background: $--white;
+        background-color: transparent;
+        color: $--dark-black;
+        font-family: 'Poppins';
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 40px;
+        width: 140px;
+        padding: 0px 10px;
+
+        &::after {
+          content: url('../images/svg/arrow-down.svg');
+          background-repeat: no-repeat;
+          border: 0px;
+          vertical-align: 0px;
+        }
+      }
+    }
+
+    .filter-button {
+      border-radius: 5px;
+      border: none;
+      background: $--light-grey;
+      width: 100%;
+      padding: 10px 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 10px;
+
+      .filters-icon {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+.company-list-content {
+  padding: 50px 0px;
+
+  .sidebar-left {
+    height: 100%;
+  }
+
+  @media (min-width: 768px) {
+    .container-md,
+    .container-sm,
+    .container {
+      max-width: 100%;
+    }
+  }
+}
+
+.cmpny-list-col-left-content {
+  width: 100%;
+  border-radius: 5px;
+  border-top: 1px solid $--Natural-grey;
+  border-bottom: 1px solid $--Natural-grey;
+  border-right: 1px solid $--Natural-grey;
+  border-left: 1px solid $--Natural-grey;
+  background: #fff;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  // overflow-y: auto;
+  position: sticky;
+  top: 20px;
+  width: 100%;
+  max-height: 100%;
+  padding: 0px;
+
+  .accordion {
+    width: 100%;
+  }
+
+  .filter-heading {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid $--Natural-grey;
+  }
+
+  .close-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .filter-label {
+    display: flex;
+    column-gap: 10px;
+  }
+
+  .filter-category {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+
+  .filters-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .location-icons {
+    width: 20px;
+    height: 20px;
+  }
+
+  .setting-icons {
+    width: 20px;
+    height: 20px;
+  }
+
+  .price-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .accordion {
+    .accordion-item {
+      border: 0px;
+      border-radius: 0px;
+
+      .accordion-button {
+        border-bottom: 1px solid $--Natural-grey;
+        padding: 20px;
+      }
+
+      .accordion-button:not(.collapsed) {
+        box-shadow: none;
+      }
+
+      .accordion-button:focus {
+        box-shadow: none;
+      }
+
+      .accordion-button:focus-visible {
+        outline: none;
+      }
+
+      .accordion-body {
+        padding: 10px 20px;
+
+        .form-control {
+          border: 1px solid $--grey;
+          font-size: 14px;
+          height: 38px;
+        }
+
+        .filter-input {
+          padding: 15px;
+          width: 100%;
+          border-radius: 5px;
+          border: 1px solid $--grey;
+          background: $--white;
+        }
+
+        .filter-input:focus-visible {
+          outline: none;
+        }
+
+        .dropdown-container {
+          border: 1px solid $--grey;
+
+          .dropdown-heading-value span {
+            border-radius: 5px;
+            border: 1px solid $--Secondary;
+            background: #e5f7dd;
+            padding: 0px 5px;
+          }
+
+          .dropdown-heading-value .gray {
+            background-color: $--white;
+            border: none;
+            color: $--grey;
+          }
+
+          .dropdown-content {
+            position: absolute !important;
+          }
+        }
+
+        .dropdown-container:focus {
+          border: 1px solid $--Primary-Color;
+          box-shadow: none;
+        }
+
+        .search-field:focus {
+          border: 1px solid $--Primary-Color;
+          box-shadow: none;
+          outline: none;
+        }
+
+        .clientbudget-dropdown {
+          border-radius: 5px;
+          border: 1px solid #898989;
+          background: #fff;
+          color: #898989;
+          width: 100%;
+          text-align: left;
+          justify-content: space-between;
+          display: flex;
+          align-items: center;
+          font-size: 14px;
+          height: 38px;
+        }
+
+        .dropdown-menu.show {
+          display: block;
+          width: 100%;
+          padding: 10px;
+          margin-top: 2px;
+
+          .form-check {
+            margin-bottom: 10px;
+            font-size: 14px;
+          }
+
+          .form-check-input:checked {
+            background-color: $--Primary-Color;
+            border-color: $--Primary-Color;
+          }
+
+          .form-check-input:focus {
+            box-shadow: none;
+          }
+        }
+
+        .min-max-field {
+          display: flex;
+          column-gap: 10px;
+          margin-bottom: 10px;
+        }
+
+        .form-control:focus {
+          box-shadow: none;
+          border: 1px solid $--Primary-Color;
+        }
+
+        .price-filter-box {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+        }
+      }
+    }
+  }
+
+  .accordion-button:not(.collapsed) {
+    background-color: $--white;
+  }
+
+  .rmsc .dropdown-content {
+    position: relative !important;
+    transition: 1s;
+    font-size: 14px;
+  }
+
+  .rmsc .dropdown-container {
+    transition: 1s;
+  }
+
+  .rmsc .dropdown-container:focus-within {
+    box-shadow: none !important;
+    border: 1px solid $--Primary-Color !important;
+  }
+
+  .rmsc .dropdown-heading {
+    font-size: 14px;
+  }
+}
+
+.cmpny-list-col-right-content {
+  margin-bottom: 30px;
+  position: relative;
+  .svg-image {
+    position: absolute;
+    top: -3px;
+    right: 6%;
+  }
+  .company-card {
+    padding: 20px 20px;
+    border-radius: 20px;
+    border: 1.5px solid #d9d9d9;
+    background: #fff;
+
+    .cmpny-detail {
+      display: flex;
+      column-gap: 15px;
+      .company-image {
+        display: flex;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        background: $--light-grey;
+        height: 92px;
+        width: 92px;
+        object-fit: cover;
+      }
+
+      .about-cmpny {
+        .cmpny-desc {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          width: 100%;
+          max-width: 953px;
+          color: $--dark-black;
+          font-family: 'Poppins';
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+        }
+        .company-name .p-16-600 {
+          color: $--dark-black;
+          font-family: 'Poppins';
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 30px;
+        }
+      }
+      .cmpny-rtng {
+        display: inline-flex;
+        align-items: center;
+        margin: 5px 0px;
+        .starrating-icon {
+          width: 10px;
+          height: 10px;
+        }
+        .rating-star-box {
+          display: flex;
+          margin-left: 8px;
+          column-gap: 1px;
+        }
+        .cmpny-rtng-label {
+          color: $--grey;
+          font-family: 'Poppins';
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 21px;
+        }
+      }
+    }
+
+    .cmpny-header-separator {
+      height: 1px;
+      width: 100%;
+      margin: 15px 0px;
+      background-color: $--grey;
+    }
+    .cmpmy-card-body-header {
+      display: flex;
+      align-items: center;
+      column-gap: 30px;
+      row-gap: 15px;
+      flex-wrap: wrap;
+
+      .body-header-item {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+      }
+
+      .body-header-item svg {
+        height: 21px;
+        width: 21px;
+      }
+
+      .body-header-item .verified {
+        height: 20px;
+        width: 20px;
+      }
+
+      .body-header-item .header-item-title {
+        color: $--grey;
+        font-family: 'Poppins';
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+      }
+      .body-header-item .active-verified {
+        color: $--Primary-Color;
+      }
+    }
+    .cmpny-card-content {
+      border-radius: 10px;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      margin-top: 15px;
+
+      .raiting-col-left {
+        width: 100%;
+        padding-right: 24px;
+        position: relative;
+
+        .cmpmy-overall-raiting-content {
+          padding: 10px;
+          border-radius: 10px;
+          border: 1.5px solid $--Natural-grey;
+          background: #fff;
+
+          .cmpny-raiting-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+
+            .overall-raiting-title {
+              display: flex;
+              align-items: center;
+              column-gap: 15px;
+            }
+
+            .overall-raiting-title h6 {
+              color: #000;
+              font-family: 'Poppins';
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 30px;
+            }
+
+            .overall-raiting-title p {
+              color: $--grey;
+              font-family: 'Poppins';
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 21px;
+            }
+
+            .raiting-points {
+              border-radius: 30px;
+              background: $--light-grey;
+              height: 39px;
+              width: 39px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+
+            .raiting-points h6 {
+              color: $--Primary-Color;
+              font-family: 'Poppins';
+              font-size: 16px;
+              font-weight: 500;
+              line-height: 24px;
+            }
+          }
+
+          .cmpny-raiting {
+            .raiting-sub-points p {
+              margin-bottom: 0px;
+              color: $--grey;
+              text-align: right;
+              font-family: 'Poppins';
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 21px;
+            }
+
+            .raiting-type {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              column-gap: 12px;
+              margin-top: -6px;
+              margin-bottom: 10px;
+
+              .raiting-type-title {
+                width: 100%;
+                max-width: 119px;
+              }
+
+              .raiting-type-title h5 {
+                color: #000;
+                font-family: Poppins;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+              }
+
+              .progress {
+                width: 100%;
+                height: 6px;
+                background: $--light-grey;
+              }
+
+              .progress.app-design .progress-bar {
+                border-radius: 50px;
+                background: linear-gradient(90deg, #11998e -72.35%, #38ef7d 103.67%);
+              }
+
+              .progress.quality-work .progress-bar {
+                border-radius: 50px;
+                background: linear-gradient(90deg, #f7971e -4.47%, #ffd200 107.13%);
+              }
+
+              .progress.response-time .progress-bar {
+                border-radius: 50px;
+                background: linear-gradient(90deg, #3a7bd5 -4.69%, #00d2ff 103.06%);
+              }
+
+              .progress.cost .progress-bar {
+                border-radius: 50px;
+                background: linear-gradient(90deg, #799f0c -0.82%, #ffe000 102.24%);
+              }
+            }
+            .raiting-type:nth-last-child(1) {
+              margin-bottom: 0px;
+            }
+            .progress-rating-box {
+              margin-bottom: 10px;
+            }
+            .progress-rating-box:nth-last-child(1) {
+              margin-bottom: 0px;
+            }
+          }
+        }
+      }
+      .raiting-col-left:after {
+        content: '';
+        width: 1px;
+        height: 216px;
+        background: #d9d9d9;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate(0px, -50%);
+        margin: 0px 12px;
+      }
+      .raiting-col-right {
+        width: 100%;
+        max-width: 160px;
+        display: flex;
+        .cpmny-send-msg-button button {
+          display: flex;
+          align-items: center;
+          border-radius: 10px;
+          background: $--Primary-Color;
+          color: $--white;
+          font-family: 'Poppins';
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px;
+          border: none;
+          height: 50px;
+          width: 100%;
+          max-width: 160px;
+          margin-bottom: 15px;
+          transition: all 0.4s;
+          position: relative;
+          padding: 13px 10px 13px 20px;
+
+          &::after {
+            content: url('../images/svg/send_message_button.svg');
+            font-weight: 400;
+            position: absolute;
+            right: -3px;
+            bottom: -3px;
+            opacity: 0;
+            transform: translate(-50%, -50%);
+          }
+
+          &:hover {
+            background: $--Hover-Dark-Green;
+            transition: all 0.4s;
+            padding: 0px 25px 0px 12px;
+            color: #ffffff;
+
+            &::after {
+              opacity: 1;
+              transition: all 0.4s;
+            }
+          }
+        }
+
+        .cpmny-send-msg-button:hover button {
+          background-color: $--Hover-Dark-Green;
+        }
+
+        .cpmny-send-msg-button:hover button {
+          .send-msg-icon {
+            opacity: 1;
+          }
+        }
+
+        .cpmny-view-profile-button a {
+          display: flex;
+          align-items: center;
+          border-radius: 10px;
+          border: 1px solid $--Primary-Color;
+          height: 50px;
+          width: 100%;
+          max-width: 160px;
+          margin-bottom: 15px;
+          transition: 0.5s all;
+          color: $--dark-black;
+          font-family: 'Poppins';
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          text-decoration: none;
+          column-gap: 10px;
+          padding: 13px 10px 13px 20px;
+
+          .btn-icn {
+            margin-right: 10px;
+          }
+        }
+
+        .cpmny-view-profile-button a:hover {
+          background: var(--Hover-Light-Green, rgba(126, 217, 87, 0.2));
+        }
+
+        .cpmny-visit-site-button a {
+          display: flex;
+          align-items: center;
+          border-radius: 10px;
+          border: 1px solid $--Primary-Color;
+          height: 50px;
+          width: 100%;
+          max-width: 160px;
+          margin-bottom: 15px;
+          color: $--dark-black;
+          font-family: 'Poppins';
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px;
+          text-decoration: none;
+          column-gap: 10px;
+          transition: 0.5s all;
+          padding: 13px 10px 13px 20px;
+          .btn-icn {
+            margin-right: 10px;
+          }
+        }
+        .cpmny-visit-site-button a:nth-last-child(1) {
+          margin-bottom: 0px;
+        }
+
+        .cpmny-visit-site-button a:hover {
+          background: $--Hover-Light-Green;
+        }
+
+        .viewprofile-icon {
+          width: 20px;
+          height: 18px;
+        }
+
+        .link-icon {
+          width: 16px;
+          height: 16px;
+        }
+        .cmpny-content-buttons {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.apply-button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 10px 15px;
+  border-top: 1px solid #d9d9d9;
+}
+
+.apply-btn {
+  border-radius: 50px;
+  border: none;
+  background: $--Primary-Color;
+  color: $--white;
+  padding: 10px 15px;
+}
+
+.mobile-filter-content.content-hide {
+  display: none;
+}
+
+.filter-btn {
+  display: none;
+}
+.company-list-filter-box {
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.08);
+  padding: 30px 20px;
+  margin-bottom: 30px;
+  .filter-closeicon {
+    position: absolute;
+    right: 30px;
+    cursor: pointer;
+    color: $--Primary-Color;
+    background-color: #fff;
+    border-radius: 50px;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.08);
+  }
+  .compny-list-filter {
+    display: flex;
+    column-gap: 20px;
+    .location-field {
+      padding: 8px 8px 8px 40px;
+    }
+    .location-img svg {
+      position: absolute;
+      display: block;
+      width: 15px;
+      height: 30px;
+      z-index: 1;
+      margin-right: 0px 10px 0px 15px;
+      padding-right: 2;
+      margin: 4px 10px 4px 15px;
+    }
+  }
+  .search-field {
+    border-radius: 5px;
+    border: 1px solid var(--grey, #898989);
+    background: var(--Pure-White, #fff);
+    width: 100%;
+    height: 40px;
+    padding: 8px 15px;
+    color: #898989;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .search-field[type='search'] {
+    outline-offset: 0px;
+  }
+  .search-field[type='search']::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    content: URL('../images/svg/closeicon.svg');
+    fill: $--Primary-Color;
+    cursor: pointer;
+    color: $--Primary-Color;
+  }
+  .filter-field .search-field:focus-within,
+  .filter-field .dropdown-container:focus-within,
+  .clientbudget-dropdown:focus-within {
+    outline-color: $--Primary-Color !important;
+    box-shadow: none;
+    border-color: $--Primary-Color !important;
+    outline: 1px;
+  }
+  .service-field .dropdown-container {
+    border-radius: 5px;
+    border: 1px solid var(--grey, #898989);
+    background: var(--Pure-White, #fff);
+    width: 100%;
+    height: 40px;
+  }
+  .clientbudget-field .clientbudget-dropdown {
+    border-radius: 5px;
+    border: 1px solid #898989;
+    background: #fff;
+    color: #898989;
+    text-align: left;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    width: 100%;
+    font-family: 'Poppins';
+    height: 40px;
+    // max-width: 260px;
+  }
+  .clientbudget-field .form-check-label {
+    color: var(--dark-black, #252525);
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  .clientbudget-dropdown::after {
+    content: url('../images/svg/arrow-down.svg');
+    background-repeat: no-repeat;
+    border: 0px;
+    vertical-align: 0px;
+    transition: 0.5s;
+  }
+  .clientbudget-dropdown[aria-expanded='true']::after {
+    rotate: 180deg;
+  }
+  .form-check-input:checked {
+    background-color: #06ab58;
+    border-color: #06ab58;
+    box-shadow: none;
+  }
+  .gray {
+    color: #898989 !important;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .filter-field {
+    display: flex;
+    width: 100%;
+  }
+  .item-renderer span {
+    color: var(--dark-black, #252525);
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  .dropdown-menu {
+    width: 100%;
+    padding: 10px;
+    .dropdown-item:hover,
+    .dropdown-item:focus {
+      background-color: $--Primary-Color;
+      color: $--white;
+    }
+  }
+  .sort-dropdown.dropdown-menu {
+    padding: 10px 0px;
+  }
+  .dropdown-search-clear-icon line {
+    color: $--Primary-Color;
+  }
+  .applyfilter-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    .apply-filter-btn {
+      border-radius: 10px;
+      background: var(--Primary-Color, #06ab58);
+      width: 160px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--Pure-White, #fff);
+      text-align: center;
+      font-family: 'Poppins';
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      text-decoration: none;
+      transition: 1s;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+    .disabled-filter-btn {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+    .apply-filter-btn:hover {
+      background-color: #098948;
+    }
+  }
+}
+@media only screen and (max-width: 767px) {
+  .filter-btn {
+    display: block;
+  }
+
+  .mobile-filter-content.content-show {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 120px;
+    z-index: 10;
+  }
+
+  .company-list-content {
+    padding: 30px 0px;
+
+    .sidebar-left {
+      display: none;
+    }
+  }
+
+  .section-cmpny-list-header {
+    margin: 15px 0px 0px 0px;
+  }
+
+  .section-inner-banner {
+    .inner-banner-heading h1 {
+      font-size: 32px;
+    }
+  }
+
+  .section-numbeer-of-company {
+    padding: 15px 15px 30px 15px;
+    margin: 0px;
+
+    .margin-btm {
+      margin-bottom: 20px;
+    }
+
+    .number-of-companies-content {
+      padding: 0px;
+
+      .total-companies {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .cmpny-list-col-right-content {
+    .company-card {
+      padding: 20px 10px;
+
+      .cmpny-card-content {
+        flex-wrap: wrap;
+
+        .raiting-col-left {
+          padding-right: 0px;
+          border-right: none;
+
+          .cmpmy-card-body-header {
+            .body-header-item {
+            }
+
+            .body-header-item svg {
+            }
+
+            .body-header-item .verified {
+            }
+
+            .body-header-item .header-item-title {
+            }
+          }
+
+          .cmpmy-overall-raiting-content {
+            margin-bottom: 20px;
+          }
+        }
+        .raiting-col-left::after {
+          content: none;
+          .cpmny-send-msg-button button {
+            padding: 13px 20px 13px 20px;
+          }
+        }
+
+        .raiting-col-right {
+          width: 101%;
+          max-width: 100%;
+          justify-content: center;
+
+          .cmpny-content-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            column-gap: 15px;
+          }
+        }
+      }
+    }
+  }
+  .company-list-filter-box {
+    .compny-list-filter {
+      flex-wrap: wrap;
+      row-gap: 20px;
+      justify-content: center;
+    }
+    .filter-field {
+      display: inline-flex;
+      width: 48%;
+    }
+    .service-field .dropdown-container {
+      max-width: 322.56px;
+    }
+  }
+  .overall-raiting-title {
+    column-gap: 10px !important;
+  }
+  .overall-raiting-title h6 {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    line-height: 21px !important;
+  }
+  .overall-raiting-title p {
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    line-height: 18px !important;
+  }
+  .raiting-points {
+    width: 32px !important;
+    height: 32px !important;
+  }
+  .raiting-type-title h5 {
+    font-size: 12px !important;
+    line-height: normal !important;
+  }
+  .rating-type {
+    column-gap: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 563px) {
+  .section-cmpny-list-header {
+    .number-of-companies-content {
+      .filter-button {
+        padding: 10px 10px;
+      }
+
+      .drop-sort-by {
+        .dropdown-toggle {
+          width: 120px;
+        }
+      }
+    }
+  }
+  .company-list-filter-box {
+    .compny-list-filter {
+      flex-wrap: wrap;
+      row-gap: 15px;
+      justify-content: center;
+    }
+    .filter-field {
+      display: inline-flex;
+      width: 100%;
+    }
+    .applyfilter-button {
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+    }
+    .service-field .dropdown-container {
+      max-width: 100%;
+    }
+  }
+}

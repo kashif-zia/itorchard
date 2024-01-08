@@ -1,0 +1,31 @@
+//boostrap
+@import '~bootstrap/scss/bootstrap';
+
+// base
+@import './base/variable.scss';
+// global
+@import './global.scss';
+
+// components
+@import './components/Banner.scss';
+@import './components/InnerPageBanner.scss';
+@import './components/PopularCategory.scss';
+@import './components/Blogs.scss';
+@import './components/BlogListing.scss';
+@import './components/BlogDetails.scss';
+@import './components/Quote.scss';
+@import './components/About.scss';
+@import './components/QuoteBanner.scss';
+@import './components/CompanyDetail.scss';
+@import './components/CreateCompany.scss';
+@import './components/Loading.scss';
+@import './components/EditProfile.scss';
+// pages
+@import './companylisting.scss';
+
+// Layouts
+@import './layouts/footer.scss';
+@import './layouts/header.scss';
+
+// font-awesome
+@import '~@fortawesome/fontawesome-free/css/all.min.css';

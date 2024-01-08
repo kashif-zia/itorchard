@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "itorchard",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authitorchard35c24082",
+      "Outputs.UserPoolId"
+    ]
+  }
+}

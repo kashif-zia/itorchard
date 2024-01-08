@@ -1,0 +1,23 @@
+.section-inner-banner {
+  padding: 50px 0px 30px;
+  .inner-banner-heading h1 {
+    color: $--Primary-Color;
+    font-family: 'Poppins';
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 48px;
+    margin-bottom: 5px;
+  }
+  .breadcrumb, .home-link{
+    color: $--Dark-Grey;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-decoration: none;
+    margin-bottom: 0px;
+  }
+  .breadcrumb-fa-icon{
+    margin: 0px 10px;
+  }
+}

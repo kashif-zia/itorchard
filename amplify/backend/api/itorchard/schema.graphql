@@ -1,0 +1,190 @@
+type User
+  @model
+  @auth(
+    rules: [
+      { allow: groups, groups: ["admin"] }
+      { allow: public, operations: [read] }
+      { allow: private, operations: [read] }
+      { allow: owner, ownerField: "id", operations: [read, update] }
+    ]
+  ) {
+  id: ID!
+  name: String!
+  email: String!
+  company: IOCompany @belongsTo
+  email_verified: Boolean
+  status: String @default(value: "active")
+  createdAt: String
+  updatedAt: String
+}
+
+type Quotation
+  @model
+  @auth(
+    rules: [
+      { allow: groups, groups: ["admin"] }
+      { allow: public, operations: [create, read] }
+      { allow: private, operations: [create, read] }
+    ]
+  ) {
+  id: ID!
+  name: String!
+  email: AWSEmail!
+  organization: String!
+  description: String!
+  file: String
+  category: [String]
+  createdAt: AWSDateTime
+}
+
+type Blog
+  @model
+  @auth(
+    rules: [
+      { allow: groups, groups: ["admin"] }
+      { allow: public, operations: [read] }
+      { allow: private, operations: [read] }
+      { allow: owner, ownerField: "ownerId", operations: [create, read, delete, update] }
+    ]
+  ) {
+  id: ID!
+  title: String!
+  description: String
+  body: String!
+  slug: String! @index(name: "getBlogBySlug")
+  thumbnail: String
+  tags: [String]
+  meta_title: String
+  meta_description: String
+  meta_keywords: String
+  isPublished: Boolean
+  ownerId: ID! @index(name: "blogByUserId", sortKeyFields: ["createdAt"], queryField: "listBlogByUserId")
+  owner: User! @hasOne(fields: ["ownerId"])
+  createdAt: AWSDateTime
+}
+
+type ContactUs
+  @model
+  @auth(
+    rules: [
+      { allow: public, operations: [create, read] }
+      { allow: groups, groups: ["admin"] }
+      { allow: private, operations: [create, read] }
+    ]
+  ) {
+  id: ID!
+  first_name: String!
+  last_name: String
+  email: AWSEmail!
+  phone_number: String
+  website_url: String
+  description: String!
+  file: String
+  category: [String]!
+  company_name: String
+  skypeid: String
+  createdAt: AWSDateTime
+}
+
+type Review
+  @model
+  @auth(
+    rules: [
+      { allow: groups, groups: ["admin"] }
+      { allow: public, operations: [read] }
+      { allow: private, operations: [read] }
+      { allow: owner, ownerField: "ownerId", operations: [create, read, delete, update] }
+    ]
+  ) {
+  id: ID!
+  company_name: String!
+  company_locaion: String!
+  offered_service: [String]!
+  start_date: String!
+  end_date: String!
+  project_cost: String!
+  project_description: String!
+  status: String @default(value: "active")
+  is_approved: Boolean @default(value: "false")
+  review: String!
+  rating: Rating!
+  review_description: String!
+  ownerId: ID!
+  owner: User! @hasOne(fields: ["ownerId"])
+  IOCompany: IOCompany @belongsTo
+  createdAt: AWSDateTime
+}
+
+type IOCompany
+  @model
+  @auth(
+    rules: [
+      { allow: groups, groups: ["admin"] }
+      { allow: public, operations: [read] }
+      { allow: private, operations: [read] }
+      { allow: owner, ownerField: "ownerId", operations: [create, read, delete, update] }
+    ]
+  ) {
+  id: ID!
+  company_name: String!
+  company_tagline: String
+  website_url: String!
+  email: AWSEmail!
+  phone_no: String!
+  no_of_employee: String
+  founded: String!
+  description: String!
+  logo: String!
+  location: [String]!
+  headquarter_location: String!
+  is_verifeid: Boolean @default(value: "false")
+  is_sponsored: Boolean @default(value: "false")
+  total_earning: String
+  hourly_rate: String!
+  project_earnings: String!
+  servicesName: [String]!
+  services: [Service]!
+  social_media: SocialMedia
+  ownerId: ID!
+  owner: User! @hasOne(fields: ["ownerId"])
+  reviews: [Review] @hasMany
+  createdAt: AWSDateTime
+  status: String
+    @default(value: "active")
+    @index(name: "byStatus", sortKeyFields: ["createdAt"], queryField: "listActiveCompanies")
+}
+
+type Rating {
+  quality_work: Float
+  cost: Float
+  response_time: Float
+  overall_experience: Float
+}
+
+type Service {
+  name: String
+  percentage: Int
+}
+type SocialMedia {
+  facebook: String
+  instagram: String
+  twitter: String
+  linkedin: String
+  other: String
+}
+
+type IOServices
+  @model
+  @auth(
+    rules: [
+      { allow: groups, groups: ["admin"] }
+      { allow: public, operations: [read] }
+      { allow: private, operations: [read] }
+      { allow: owner, ownerField: "ownerId", operations: [create, read, delete, update] }
+    ]
+  ) {
+  id: ID!
+  name: String!
+  key: String
+  tagList: [String]!
+}

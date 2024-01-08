@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "storage": {
+      "ContactUs:@model(appsync)": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ]
+    }
+  },
+  "lambdaLayers": []
+}

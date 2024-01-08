@@ -1,0 +1,218 @@
+.blog-detail-container {
+  margin-bottom: 60px;
+}
+.blog-main-image {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  margin: 15px 0;
+}
+.section-blog-detail-banner {
+  .breadcrumb,
+  .home-link {
+    color: $--Dark-Grey;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+    margin-bottom: 0px;
+  }
+  .breadcrumb-fa-icon {
+    margin: 0px 10px;
+  }
+}
+.blog-detail-section {
+  display: grid;
+
+  .row > * {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 30px;
+  }
+  h1 {
+    color: $--Pure-Black;
+    font-family: 'Poppins';
+    font-size: 38px;
+    font-weight: 800;
+    line-height: normal;
+    margin: 15px 0;
+  }
+
+  .about-blog {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    .profile-image {
+      margin-right: 10px;
+    }
+    .writer-section {
+      display: grid;
+
+      .written-by {
+        color: $--Pure-Black;
+        font-family: 'Poppins';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+      .working-as {
+        color: $--grey;
+        font-family: 'Poppins';
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+
+    .icon-section {
+      display: flex;
+      gap: 10px;
+      margin: 0px 30px;
+      align-items: center;
+      .icon-text {
+        color: $--grey;
+        font-family: 'Poppins';
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+      }
+    }
+  }
+  .blog-details {
+    h2 {
+      color: $--Pure-Black;
+      font-family: 'Poppins';
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 44px;
+      margin: 30px 0px 10px 0px;
+    }
+    h2::before {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: $--Primary-Color;
+      margin-right: 15px;
+    }
+    h3 {
+      color: $--Pure-Black;
+      font-family: 'Poppins';
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 34px;
+      margin: 20px 0px 10px 0px;
+    }
+    h3::before {
+      content: '';
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: $--Primary-Color;
+      margin-right: 10px;
+    }
+    h4 {
+      color: $--Pure-Black;
+      font-family: 'Poppins';
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 34px;
+      margin: 20px 0px 10px 0px;
+    }
+    h4::before {
+      content: '';
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: $--Primary-Color;
+      margin-right: 10px;
+    }
+    h5 {
+      color: $--Pure-Black;
+      font-family: 'Poppins';
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 34px;
+      margin: 20px 0px 10px 0px;
+    }
+    h5::before {
+      content: '';
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: $--Primary-Color;
+      margin-right: 10px;
+    }
+    h6 {
+      color: $--Pure-Black;
+      font-family: 'Poppins';
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 34px;
+      margin: 20px 0px 10px 0px;
+    }
+    h6::before {
+      content: '';
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: $--Primary-Color;
+      margin-right: 10px;
+    }
+    p {
+      color: $--Pure-Black;
+      font-family: 'Poppins';
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 30px; /* 166.667% */
+    }
+    img {
+      width: 100%;
+      height: auto;
+      margin: 15px 0px;
+    }
+    a {
+      color: $--Pure-Black;
+      text-decoration: underline $--Primary-Color;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .blog-detail-section {
+    .post-item {
+      margin-bottom: 15px;
+    }
+
+    .maintwo-postimg {
+      height: 232px;
+    }
+
+    .maintwopost-title {
+      font-size: 20px;
+    }
+
+    .main-two-blog {
+      margin-bottom: 5px;
+    }
+
+    .main-two-blog {
+      margin-bottom: 5px;
+    }
+  }
+}

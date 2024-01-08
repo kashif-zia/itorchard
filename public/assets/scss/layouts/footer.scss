@@ -1,0 +1,142 @@
+.main-footer {
+  background-image: url('../../images/footer-bg.png');
+  height: auto;
+  padding: 50px 80px;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  background-size: cover;
+  .footerbottom-text {
+    margin: 30px 0px;
+    color: $--white;
+    line-height: normal;
+    font-size: 16px;
+  }
+  .fotter-social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+    transition: 1s;
+  }
+  .twitter-icon{
+    background-color: $--white;
+    border-radius: 50px;
+  }
+  .twitter-x{
+    width: 36px;
+    height: 36px;
+    padding: 5px;
+ 
+  }
+  .twitter-x svg{
+      //  fill: #fff;
+  }
+ 
+  .footer-social-link:hover {
+    background-color: $--white;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    border: none;
+  }
+  .footer-social-link .linkedin-icon{
+    fill: #ffffff;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s ease-out;
+  }
+ 
+  .footer-social-link:hover .linkedin-icon  {
+    fill: #0b69c6;
+  }
+  
+  .footer-social-link .facebook-icon {
+    fill: #ffffff;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s ease-out;
+  }
+  .footer-social-link:hover .facebook-icon {
+    fill: #0866ff;
+  }
+  .footer-social-link .instagram-icon {
+    width: 36px;
+    height: 36px;
+    transition: 0.3s ease-out;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+  .footer-social-link:hover .instagram-icon {
+    background-color: yellow;
+  }
+  .footer-social-link:hover .twitter-x {
+    background-color: #B2B2B2;
+    border-radius: 50px;
+  
+  }
+  .footer-social-link:hover .twitter-icon  {
+    fill: #ffffff;
+ 
+  }
+  .footer-social-link .youtube-icon {
+    fill: #ffffff;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s ease-out;
+  }
+  .footer-social-link:hover .youtube-icon {
+    fill: #ff0100;
+  }
+  .footer-col-content {
+    padding-left: 100px;
+    .footer-col-headeing h6 {
+      color: $--white;
+      font-family: Poppins;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin: 0px 0px 30px;
+    }
+    .footer-items ul {
+      padding-left: 0px;
+    }
+    .footer-items ul li {
+      margin-bottom: 8px;
+      list-style: none;
+    }
+    .footer-items ul li a {
+      font-size: 16px;
+      color: #fff;
+      text-decoration: none;
+    }
+    .footer-items ul li a:hover {
+      text-decoration: none;
+    }
+  }
+}
+@media only screen and (max-width: 992px) and (min-width: 769px)  {
+  .main-footer {
+  .footer-col-content{
+    padding-left: 0px;
+  }
+}
+}
+@media only screen and (max-width: 768px) {
+  .main-footer {
+    padding: 30px 16px;
+    
+    .footer-col-content {
+      padding-left: 0px;
+      .footer-col-headeing h6 {
+        margin: 0px 0px 15px;
+      }
+      
+      .footer-items ul li {
+        margin-bottom: 10px;
+      }
+    
+    }
+  }
+}

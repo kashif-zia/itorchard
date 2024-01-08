@@ -1,0 +1,42 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-itorchard-dev-120557-authRole",
+      "UnauthRoleArn": "arn:aws:iam::812096089383:role/amplify-itorchard-dev-120557-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::812096089383:role/amplify-itorchard-dev-120557-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-itorchard-dev-120557-deployment",
+      "UnauthRoleName": "amplify-itorchard-dev-120557-unauthRole",
+      "StackName": "amplify-itorchard-dev-120557",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:812096089383:stack/amplify-itorchard-dev-120557/f4eadc40-7304-11ee-997b-0aabbfb56bbf",
+      "AmplifyAppId": "d20jc5jqocas1x"
+    },
+    "categories": {
+      "function": {
+        "itorchardPostConfirmation": {
+          "userpoolid": "ap-northeast-1_kD0ySNYSe",
+          "usertable": "User-jda4ela65jb5rcllta3hdqgx2q-dev",
+          "deploymentBucketName": "amplify-itorchard-dev-120557-deployment",
+          "s3Key": "amplify-builds/itorchardPostConfirmation-6c4b31364e6f414f7341-build.zip"
+        },
+        "bulkQuotationEmailSender": {
+          "deploymentBucketName": "amplify-itorchard-dev-120557-deployment",
+          "s3Key": "amplify-builds/bulkQuotationEmailSender-6e66734b49616f666b7a-build.zip"
+        },
+        "contactEmailSender": {
+          "deploymentBucketName": "amplify-itorchard-dev-120557-deployment",
+          "s3Key": "amplify-builds/contactEmailSender-5a4c524c314158792b65-build.zip"
+        }
+      },
+      "auth": {
+        "itorchard35c24082": {}
+      },
+      "storage": {
+        "itorchard": {}
+      },
+      "api": {
+        "itorchard": {}
+      }
+    }
+  }
+}

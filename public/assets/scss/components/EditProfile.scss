@@ -1,0 +1,109 @@
+.usereditprofile-section {
+  padding-bottom: 80px;
+  .editprofile-accordianItem {
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid var(--Secondary, #7ed957);
+    background: transparent;
+  }
+  .accordion-button {
+    background-color: transparent;
+    box-shadow: none;
+    color: var(--Pure-Black, #000);
+    font-family: 'Poppins';
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 30px;
+    padding: 15px;
+  }
+  .accordion-button:focus {
+    border: none;
+    box-shadow: none;
+  }
+  .mb-20 {
+    margin-bottom: 20px;
+    .errors {
+      margin-left: 50px;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 15px;
+      color: rgba(224, 0, 0, 1);
+    }
+    .url-field-group {
+      display: flex;
+      column-gap: 10px;
+
+      .urlfield {
+        border-radius: 10px;
+        border: 1px solid var(--grey, #898989);
+        background: #fff;
+        color: $--dark-black;
+        font-family: 'Poppins';
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        width: 100%;
+        height: 40px;
+        padding: 8px 15px;
+      }
+    }
+  }
+
+  .accordion .accordion-body {
+    padding: 5px 15px 15px 15px;
+  }
+}
+.accordion .divider {
+  height: 2px;
+  width: 100%;
+  background-color: #d9d9d9;
+  margin: 20px 0px;
+}
+
+.button-section-edit {
+  display: flex;
+  justify-content: end;
+  gap: 20px;
+  width: 100%;
+  .back-arrow {
+    border-radius: 10px;
+    border: 1px solid $--Primary-Color;
+    background: $--white;
+    display: flex;
+    // width: 150px;
+    padding: 11px 28px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: $--dark-black;
+    font-family: 'Poppins';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    cursor: pointer;
+  }
+  .next-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $--Primary-Color;
+    gap: 10px;
+    color: $--white;
+    background: $--Primary-Color;
+    // width: 150px;
+    padding: 11px 28px;
+    border-radius: 10px;
+    font-family: 'Poppins';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    cursor: pointer;
+  }
+  .icon {
+    padding: 10px;
+    min-width: 40px;
+    position: absolute;
+  }
+}
